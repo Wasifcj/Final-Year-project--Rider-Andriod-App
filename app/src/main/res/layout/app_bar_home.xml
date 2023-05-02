@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_home" />
+
+   <android.support.v7.widget.CardView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_gravity="top"
+       android:layout_marginRight="8dp"
+       android:layout_marginLeft="8dp"
+       android:layout_marginTop="70dp"
+       app:cardElevation="10dp"
+
+       >
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+
+
+           >
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:weightSum="6"
+               android:orientation="horizontal"
+
+
+               >
+
+               <ImageView
+                   android:layout_gravity="center_vertical"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_location_on"
+                   android:layout_weight="1"
+
+
+
+                   />
+
+               <fragment
+
+                   android:id="@+id/place_location"
+                   android:layout_weight="5"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+
+                   android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+               />
+
+           </LinearLayout>
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:layout_marginLeft="16dp"
+               android:layout_marginRight="16dp"
+               android:background="@color/dividerColor"
+               />
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:weightSum="6"
+               android:orientation="horizontal"
+
+
+               >
+
+               <ImageView
+                   android:layout_width="0dp"
+                   android:layout_gravity="center_vertical"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_map_red_24dp"
+                   android:layout_weight="1"
+
+
+
+                   />
+
+               <fragment
+
+                   android:id="@+id/place_destination"
+                   android:layout_weight="5"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+
+                   android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                   />
+
+
+           </LinearLayout>
+
+
+
+
+       </LinearLayout>
+
+   </android.support.v7.widget.CardView>
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="300dp"
+            android:text="Get Driver"
+            android:layout_marginLeft="32dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="575dp"
+            android:id="@+id/request_driver"/>
+
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <com.github.glomadrian.materialanimatedswitch.MaterialAnimatedSwitch
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:id="@+id/location_switch"
+        android:layout_marginTop="545dp"
+        android:layout_marginLeft="290dp"
+        app:icon_release="@drawable/ic_location_off"
+        app:icon_press="@drawable/ic_location_on"
+        app:base_release_color="@color/baseReleaseColor"
+        app:base_press_color="@color/basePressColor"
+        app:ball_release_color="@color/BallReleaseColor"
+        app:ball_press_color="@color/white"
+
+
+        />
+
+
+
+</android.support.design.widget.CoordinatorLayout>

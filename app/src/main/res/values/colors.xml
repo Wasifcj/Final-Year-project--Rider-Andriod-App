@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#DC143C</color>
+    <color name="colorPrimaryDark">#DC143C</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="crimson" >#DC143C</color>
+    <color name="white">#FFFFFF</color>
+    <color name="navyblue">#0a091b</color>
+    <color name="baseReleaseColor">#070716</color>
+    <color name="basePressColor">#FFFFFF</color>
+    <color name="BallReleaseColor">#9E9E9E</color>
+    <color name="dividerColor">#1F000000</color>
+</resources>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home2">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_home2" />
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="70dp"
+        app:cardElevation="10dp"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+
+            >
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="32dp"
+
+        >
+        <Button
+            android:layout_width="300dp"
+            android:text="Get Ambulance"
+
+            android:layout_height="wrap_content"
+
+            android:id="@+id/request_driver"/>
+
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="32dp"
+
+        >
+
+        <Button
+            android:id="@+id/cancel_ride"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+
+            android:text="Cancel Emergency"
+            android:visibility="invisible" />
+
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/driver_cardView_id"
+        android:layout_width="259dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="36dp"
+        android:layout_marginBottom="78dp"
+        app:cardCornerRadius="10dp"
+        android:visibility="gone"
+
+
+
+        android:requiresFadingEdge="vertical"
+        android:fadingEdge="horizontal"
+        android:backgroundTint="@color/crimson"
+
+
+
+        android:layout_height="150dp">
+
+
+        <TextView
+            android:id="@+id/Driver_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/Driver_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="52dp"
+            android:text="" />
+        <de.hdodenhof.circleimageview.CircleImageView
+
+            android:id="@+id/Driver_profile_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="3dp"
+            android:layout_marginLeft="85dp"
+            android:src="@drawable/avatar"
+
+            app:layout_constraintHorizontal_bias="0.44"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </android.support.v7.widget.CardView>
+
+
+    <RadioGroup
+        android:layout_width="60dp"
+        android:background="@color/white"
+
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="300dp"
+        android:layout_marginBottom="100dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+
+        >
+
+        <RadioButton
+
+            android:id="@+id/bike_ambulance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            >
+
+
+        </RadioButton>
+        <ImageView
+
+            android:layout_marginLeft="2dp"
+            android:layout_height="40dp"
+            android:layout_width="40dp"
+            android:src="@drawable/bike"
+            android:layout_marginBottom="23dp"
+
+            />
+
+        <RadioButton
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:id="@+id/simple_ambulance"
+
+            />
+
+        <ImageView
+            android:layout_marginLeft="2dp"
+            android:layout_height="40dp"
+            android:layout_width="40dp"
+            android:src="@drawable/simple_ambulance"
+            android:layout_marginBottom="23dp"
+
+            />
+
+
+        <RadioButton
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:id="@+id/advance_ambulance"
+            />
+        <ImageView
+            android:layout_marginLeft="2dp"
+            android:layout_height="40dp"
+            android:layout_width="40dp"
+            android:src="@drawable/advance_ambulance"
+            android:layout_marginBottom="23dp"
+
+            />
+
+
+
+    </RadioGroup>
+
+    <com.github.glomadrian.materialanimatedswitch.MaterialAnimatedSwitch
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:id="@+id/location_switch"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="425dp"
+        android:layout_marginLeft="300dp"
+        app:icon_release="@drawable/ic_location_off"
+        app:icon_press="@drawable/ic_location_on"
+        app:base_release_color="@color/baseReleaseColor"
+        app:base_press_color="@color/basePressColor"
+        app:ball_release_color="@color/BallReleaseColor"
+        app:ball_press_color="@color/white"
+
+
+        />
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>
